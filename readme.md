@@ -1,6 +1,8 @@
 # Wikipedia Api
 
-## Input and output schema for your API:
+This demonstrates a simple Rest API that produces a short, 'google-like' description for a person or search input.
+
+## 1. Input and output schema for your API:
 
 ### Input schema:
 
@@ -25,15 +27,15 @@ json
 
 If the short description is missing in the content, the API will return an error message indicating that the short description could not be found.
 
-## Functioning code in a public github repo:
+## 2. Functioning code in a public github repo:
 
-* Clone the repository
+* Clone this repository
 * Install dependencies using *npm install*
 * Start the server using *npm start*
-* Send a GET request to http://localhost:3000/api/short-description?name=Yoshua%20Bengio to get the short description for Yoshua Bengio.
+* Send a GET request to http://localhost:3000/api/shortdescription?title=Yoshua%20Bengio to get the short description for Yoshua Bengio.
 * To run automated tests use the command *npm test*
 
-## Keeping the API service highly available and reliable:
+## 3. Keeping the API service highly available and reliable:
 To keep the API service highly available and reliable, we can take the following steps:
 
 * Implement caching mechanisms to reduce the number of requests to the Wikipedia API and improve the response time of the API.
@@ -48,6 +50,6 @@ If you want to make changes to the code, you can edit the files in the src direc
 ## Acknowledgments
 1. Express.js
 2. Node.js
-3. nodemon
-
-That's it! You should now have the API up and running on your local machine. Feel free to customize it to your needs and have fun building!
+3. Wikipedia API
+4. Jest
+5. Axios
