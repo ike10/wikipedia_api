@@ -3,8 +3,8 @@ const axios = require('axios');
 exports.getShortDescription = async (req, res) => {
   // console.log('endpoint hit')
  try {
-    const name = req.query.name;
-    const response = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=${name}&rvlimit=1&formatversion=2&format=json&rvprop=content`);
+    const title = req.query.title;
+    const response = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=${title}&rvlimit=1&formatversion=2&format=json&rvprop=content`);
     const content = response.data.query.pages[0].revisions[0].content;
     const regex = /\{\{Short description\|(.+?)\}\}/;
     const match = content.match(regex);
